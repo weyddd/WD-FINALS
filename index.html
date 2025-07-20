@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waide Delos Reyes - Portfolio</title>
+    <title>Waide Delos Reyes - Home</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN for icons -->
@@ -13,20 +13,20 @@
 </head>
 <body class="font-inter">
 
-    <div class="main-container">
+    <div class="page-wrapper">
         <!-- Navigation Bar -->
         <nav class="bg-white p-4 flex justify-between items-center border-b border-gray-200">
             <div class="flex items-center">
-                <a href="#hero" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
+                <a href="index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#hero" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
-                <a href="#about" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
-                <a href="#projects" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
-                <a href="#hobbies" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Hobbies</a>
-                <a href="#contact" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
+                <a href="index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
+                <a href="about.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
+                <a href="projects.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
+                <a href="hobbies.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Hobbies</a>
+                <a href="contact.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
             </div>
-            <button class="btn-primary hidden md:block" onclick="showPage('contact')">Let's Talk</button>
+            <a href="contact.html" class="btn-primary hidden md:block">Let's Talk</a>
             <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-[#333333] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -36,18 +36,17 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white p-4 border-b border-gray-200">
             <ul class="flex flex-col space-y-4">
-                <li><a href="#hero" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
-                <li><a href="#about" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
-                <li><a href="#projects" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
-                <li><a href="#hobbies" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Hobbies</a></li>
-                <li><a href="#contact" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
-                <li><button class="btn-primary w-full" onclick="showPage('contact')">Let's Talk</button></li>
+                <li><a href="index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
+                <li><a href="about.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
+                <li><a href="projects.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
+                <li><a href="hobbies.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Hobbies</a></li>
+                <li><a href="contact.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
+                <li><a href="contact.html" class="btn-primary w-full text-center">Let's Talk</a></li>
             </ul>
         </div>
 
-
         <!-- Hero Section (Landing Page) -->
-        <section id="hero" class="page-section active bg-white">
+        <section id="hero" class="bg-white py-16 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
             <div class="flex-1 pr-0 md:pr-8 mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-[#333333] mb-4 leading-tight">
                     Hi, I'm Waide Delos Reyes!
@@ -59,12 +58,12 @@
                     I am a passionate cybersecurity enthusiast known for crafting robust and user-friendly security solutions. With a keen eye for detail and a deep understanding of modern cyber threats, I transform complex security challenges into beautifully functional digital defenses.
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-                    <button class="btn-primary" onclick="showPage('projects')">
+                    <a href="projects.html" class="btn-primary">
                         Projects <i class="fas fa-code ml-2"></i>
-                    </button>
-                    <button class="btn-secondary" onclick="showPage('contact')">
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
                         Hire me <i class="fas fa-external-link-alt ml-2"></i>
-                    </button>
+                    </a>
                 </div>
                 <div class="flex space-x-6 justify-center md:justify-start">
                     <a href="#" class="text-[#666666] hover:text-[#FF3B3B] transition duration-300"><i class="fab fa-facebook-f text-2xl"></i></a>
@@ -74,113 +73,6 @@
             </div>
             <div class="flex-1 flex justify-center items-center">
                 <img src="https://placehold.co/400x400/D1D5DB/ffffff?text=Waide+Delos+Reyes" alt="Waide Delos Reyes" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg">
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="page-section bg-white py-16">
-            <h2 class="text-4xl font-bold text-center text-[#333333] mb-10">Our Latest Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/FF3B3B/F8F0F0?text=Project+Alpha" alt="Project Alpha" class="project-image">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Project Alpha: Secure Web App</h3>
-                    <p class="text-[#666666] mb-4">
-                        A cutting-edge web application designed with robust security features to protect sensitive data and streamline workflows.
-                    </p>
-                    <a href="#" class="text-[#FF3B3B] hover:underline font-medium">View Details &rarr;</a>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/8B0000/F8F0F0?text=Project+Beta" alt="Project Beta" class="project-image">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Project Beta: Network Security Audit</h3>
-                    <p class="text-[#666666] mb-4">
-                        Comprehensive audit and implementation of advanced security protocols for a large corporate network, enhancing threat detection.
-                    </p>
-                    <a href="#" class="text-[#FF3B3B] hover:underline font-medium">View Details &rarr;</a>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="card">
-                    <img src="https://placehold.co/600x400/FF6B6B/F8F0F0?text=Project+Gamma" alt="Project Gamma" class="project-image">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Project Gamma: Cybersecurity Training Platform</h3>
-                    <p class="text-[#666666] mb-4">
-                        An interactive online platform providing hands-on cybersecurity training modules for aspiring security professionals.
-                    </p>
-                    <a href="#" class="text-[#FF3B3B] hover:underline font-medium">View Details &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="page-section bg-white py-16">
-            <div class="card text-center">
-                <h2 class="text-4xl font-bold text-[#333333] mb-6">About Me</h2>
-                <p class="text-lg text-[#666666] mb-4">
-                    I am Waide Delos Reyes, a dedicated Cybersecurity Enthusiast with a passion for digital defense and innovation. My journey in cybersecurity began with a fascination for how systems work and how they can be protected from evolving threats.
-                </p>
-                <p class="text-lg text-[#666666] mb-4">
-                    With a strong foundation in network security, ethical hacking, and incident response, I strive to build secure environments and educate others on best practices. I believe in continuous learning and adapting to the dynamic landscape of cybersecurity.
-                </p>
-                <p class="text-lg text-[#666666]">
-                    My goal is to contribute to a safer digital world by developing robust security solutions and fostering a greater understanding of cybersecurity principles.
-                </p>
-            </div>
-        </section>
-
-        <!-- Hobbies Section -->
-        <section id="hobbies" class="page-section bg-white py-16">
-            <h2 class="text-4xl font-bold text-center text-[#333333] mb-10">My Hobbies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Gaming</h3>
-                    <p class="text-[#666666]">
-                        Exploring virtual worlds and competitive gaming, which also hones problem-solving and strategic thinking skills.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Reading & Learning</h3>
-                    <p class="text-[#666666]">
-                        Diving into books and online courses, particularly on new technologies, history, and cybersecurity trends.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Coding & Experimenting</h3>
-                    <p class="text-[#666666]">
-                        Building small projects and experimenting with different programming languages and frameworks to understand how things work.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Outdoor Activities</h3>
-                    <p class="text-[#666666]">
-                        Enjoying nature through hiking, cycling, or simply taking long walks to clear the mind and stay active.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="page-section bg-white py-16">
-            <div class="card max-w-xl mx-auto">
-                <h2 class="text-4xl font-bold text-center text-[#333333] mb-8">Get in Touch</h2>
-                <form class="space-y-4">
-                    <div>
-                        <label for="name" class="block text-[#333333] text-sm font-medium mb-1">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" class="input-field">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-[#333333] text-sm font-medium mb-1">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" class="input-field">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-[#333333] text-sm font-medium mb-1">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your message..." class="input-field"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn-primary">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
             </div>
         </section>
 
@@ -203,11 +95,11 @@
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#hero" class="footer-link nav-link">Home</a></li>
-                        <li><a href="#about" class="footer-link nav-link">About me</a></li>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About me</a></li>
                         <li><a href="#" class="footer-link">Education</a></li>
-                        <li><a href="#projects" class="footer-link nav-link">Portfolio</a></li>
-                        <li><a href="#hobbies" class="footer-link nav-link">Hobbies</a></li>
+                        <li><a href="projects.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="hobbies.html" class="footer-link">Hobbies</a></li>
                     </ul>
                 </div>
 
