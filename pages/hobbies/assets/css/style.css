@@ -1,0 +1,118 @@
+/* Custom styles for the Inter font and general body */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #2C2C2C; /* Dark gray from palette */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Padding around the main content container */
+}
+
+/* Wrapper for each page content to apply white background and shadow */
+.page-wrapper {
+    background-color: #FFFFFF; /* White background */
+    border-radius: 2rem; /* Large rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Soft shadow */
+    width: 100%;
+    max-width: 1200px; /* Max width for the container */
+    overflow: hidden; /* Ensures rounded corners clip content */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card styling for projects and other content */
+.card {
+    background-color: #FFFFFF; /* Cards inside the white wrapper are also white */
+    border-radius: 1rem; /* More rounded corners */
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02); /* Lighter shadow for inner cards */
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Hero section specific styling */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem; /* More padding for hero */
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        flex-direction: row; /* Row layout on larger screens */
+        text-align: left;
+        justify-content: space-between;
+    }
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #FF3B3B; /* Bright Red from palette */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+    background-color: #FF6B6B; /* Light Red from palette on hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FF3B3B; /* Bright Red text */
+    border: 1px solid #FF3B3B; /* Bright Red border */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #FF3B3B;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Input field styling */
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D1D5DB; /* Light gray border */
+    background-color: #F9FAFB; /* Off-white background */
+    color: #333333; /* Dark text color */
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #FF3B3B; /* Bright Red border on focus */
+    box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.2); /* Light red shadow on focus */
+}
+
+/* Footer specific styles */
+.footer-link {
+    color: #666666; /* Medium gray for footer links */
+    transition: color 0.2s ease-in-out;
+}
+.footer-link:hover {
+    color: #FF3B3B; /* Bright Red on hover */
+}
+
+/* Responsive image styling */
+.project-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 0.75rem; /* Slightly less rounded than card */
+    margin-bottom: 1rem;
+}
