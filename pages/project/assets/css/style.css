@@ -1,16 +1,24 @@
 /* Custom styles for the Inter font and general body */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #2C2C2C; /* Dark gray from palette */
+    background-color: #2C2C2C; /* Dark gray from palette for most pages */
     min-height: 100vh; /* Ensure body takes full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Padding around the main content container */
+    padding: 0; /* Remove padding from body, wrapper will handle it */
 }
 
+/* Specific body background for projects.html */
+/* This class is applied directly to the body tag in projects.html */
+body.bg-\[\#2C2C2C\] {
+    background-color: #2C2C2C; /* Dark gray background for projects page */
+}
+
+
 /* Wrapper for each page content to apply white background and shadow */
+/* This wrapper is now specifically for pages that are white background (index, about, education, contact) */
 .page-wrapper {
     background-color: #FFFFFF; /* White background */
     border-radius: 2rem; /* Large rounded corners */
@@ -21,6 +29,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* New wrapper for projects page to handle its specific dark background */
+.page-wrapper-projects {
+    width: 100%;
+    max-width: 1200px; /* Max width for the container */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent; /* This wrapper itself doesn't have a background */
+}
+
 
 /* Card styling for general content (used in About, Education, Contact) */
 .card {
@@ -109,7 +128,7 @@ body {
 }
 
 /* Responsive image styling for general use (e.g., hero image) */
-.project-image { /* Renamed from .project-image to avoid conflict with new project card images */
+.hero-image { /* Renamed from .project-image to avoid conflict with new project card images */
     width: 100%;
     height: 200px; /* Fixed height for consistency */
     object-fit: cover; /* Cover the area, cropping if necessary */
@@ -117,35 +136,68 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Specific styles for project cards to match the new design (moved from projects.html) */
-.project-card-new {
-    background-color: #222222; /* Black from palette for the card background */
+/* --- Project Card Styles (Version 2) - Specific to projects.html --- */
+.project-card-v2 {
+    background-color: #333333; /* Dark gray background from image */
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
     padding: 1.5rem;
-    color: #F8F0F0; /* Off-white from palette for general text in card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Ensure cards take full height in grid */
+    color: #F8F0F0; /* Off-white text color */
+    display: flex; /* Use flexbox for image and content side-by-side */
+    flex-direction: column; /* Default to column for mobile */
+    align-items: center; /* Center items in column layout */
+    text-align: center; /* Center text in column layout */
 }
 
-.project-card-new img {
+@media (min-width: 768px) {
+    .project-card-v2 {
+        flex-direction: row; /* Row layout on larger screens */
+        text-align: left; /* Align text left in row layout */
+    }
+}
+
+.project-image-container {
+    width: 100%; /* Full width for image container on mobile */
+    max-width: 400px; /* Max width for image on larger screens */
+    height: 250px; /* Fixed height for image */
+    flex-shrink: 0; /* Prevent image from shrinking */
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    overflow: hidden; /* Ensure image corners are rounded */
+    border: 1px solid #555555; /* Light border for image container */
+}
+
+.project-image-container img {
     width: 100%;
-    height: 200px; /* Fixed height for image consistency */
+    height: 100%;
     object-fit: cover;
 }
 
-.project-card-new .tags {
+.project-content-container {
+    padding-left: 0; /* No padding on left for mobile */
+    flex-grow: 1; /* Allow content to grow */
+}
+
+@media (min-width: 768px) {
+    .project-content-container {
+        padding-left: 1.5rem; /* Add padding on left for desktop */
+    }
+}
+
+.tags-v2 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    justify-content: center; /* Center tags on mobile */
 }
 
-.project-card-new .tag {
+@media (min-width: 768px) {
+    .tags-v2 {
+        justify-content: flex-start; /* Align tags left on desktop */
+    }
+}
+
+.tag-v2 {
     background-color: #555555; /* Darker gray for tag background */
     color: #F8F0F0; /* Off-white for tag text */
     padding: 0.25rem 0.75rem;
@@ -153,51 +205,30 @@ body {
     font-size: 0.875rem;
 }
 
-.project-card-new .button-group {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.project-card-new .btn-project {
-    background-color: #FF3B3B; /* Bright Red from palette */
+.btn-source-code {
+    background-color: #666666; /* Gray background from image */
     color: white;
     padding: 0.6rem 1.2rem;
     border-radius: 0.5rem;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
-    display: flex;
+    display: inline-flex; /* Use inline-flex to center button text/icon */
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    border: 1px solid #666666; /* Gray border from image */
 }
 
-.project-card-new .btn-project:hover {
-    background-color: #FF6B6B; /* Light Red from palette on hover */
+.btn-source-code:hover {
+    background-color: #777777; /* Slightly lighter gray on hover */
     transform: translateY(-2px);
 }
 
-.project-card-new .btn-project.outline {
-    background-color: transparent;
-    border: 1px solid #FF3B3B; /* Bright Red border from palette */
-    color: #FF3B3B; /* Bright Red text from palette */
-}
-
-.project-card-new .btn-project.outline:hover {
-    background-color: #FF3B3B; /* Bright Red from palette on hover */
-    color: white;
-}
-
-/* Ensure the projects section itself has the dark background */
-#projects {
-    background-color: #2C2C2C; /* Dark gray from palette */
-    color: #F8F0F0; /* Off-white for text in projects section */
-}
-
 /* Override existing .card styles for elements within the #projects section */
+/* This is important to ensure the new project-card-v2 styles take precedence */
 #projects .card {
-    background-color: transparent; /* Make original card background transparent */
-    box-shadow: none; /* Remove original card shadow */
-    padding: 0; /* Remove original card padding */
-    margin-bottom: 0; /* Remove original card margin */
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0;
 }
