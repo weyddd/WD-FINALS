@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS: Path adjusted based on your file structure -->
+    <!-- Assumes style.css is in WD-FINALS/pages/about/assets/css/ -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-inter">
 
@@ -17,16 +18,19 @@
         <!-- Navigation Bar -->
         <nav class="bg-white p-4 flex justify-between items-center border-b border-gray-200">
             <div class="flex items-center">
-                <a href="/WD-FINALS/index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
+                <!-- Adjusted path for logo link: Go up two levels to WD-FINALS/ then to index.html -->
+                <a href="../../index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
             </div>
             <div class="hidden md:flex space-x-8">
-               <a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
-                 <a href="/WD-FINALS/pages/about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
-                 <a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
-                 <a href="/WD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
-                 <a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
+                <!-- Adjusted paths for navigation links (relative to pages/about/index.html) -->
+                <a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
+                <a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
+                <a href="../project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
+                <a href="../education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
+                <a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
             </div>
-            <a href="/WD-FINALS/pages/contact/" class="btn-primary hidden md:block">Let's Talk</a>
+            <!-- Adjusted path for "Let's Talk" button -->
+            <a href="../contact/index.html" class="btn-primary hidden md:block">Let's Talk</a>
             <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-[#333333] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -36,26 +40,27 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white p-4 border-b border-gray-200">
             <ul class="flex flex-col space-y-4">
-                 <li><a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
-                <li><a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
-                <li><a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
-                <li><a href="/WD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
+                <!-- Adjusted paths for mobile navigation links -->
+                <li><a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
+                <li><a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
+                <li><a href="../project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
+                <li><a href="../education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
+                <li><a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
+                <li><a href="../contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
             </ul>
         </div>
 
-        <!-- About Us Section -->
-        <section id="about" class="bg-white py-16 px-4 md:px-8">
-            <div class="card text-center">
-                <h2 class="text-4xl font-bold text-[#333333] mb-6">About Me</h2>
-                <p class="text-lg text-[#666666] mb-4">
+        <!-- About Me Section -->
+        <section id="about" class="py-12 px-4 md:px-8 bg-gray-50">
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-100">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-8 tracking-tight">About Me</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
                     I am Waide Delos Reyes, a dedicated Cybersecurity Student with a passion for digital defense and innovation. My journey in cybersecurity began with a fascination for how systems work and how they can be protected from evolving threats.
                 </p>
-                <p class="text-lg text-[#666666] mb-4">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
                     With a strong foundation in network security, ethical hacking, and incident response, I strive to build secure environments and educate others on best practices. I believe in continuous learning and adapting to the dynamic landscape of cybersecurity.
                 </p>
-                <p class="text-lg text-[#666666]">
+                <p class="text-lg text-gray-700 leading-relaxed">
                     My goal is to contribute to a safer digital world by developing robust security solutions and fostering a greater understanding of cybersecurity principles.
                 </p>
             </div>
@@ -80,11 +85,12 @@
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="/WD-FINALS/index.html" class="footer-link">Home</a></li>
-                        <li><a href="/WD-FINALS/pages/about/index.html" class="footer-link">About me</a></li>
-                        <li><a href="/WD-FINALS/pages/education/index.html" class="footer-link">Education</a></li>
-                        <li><a href="/WD-FINALS/pages/project/index.html" class="footer-link">Portfolio</a></li>
-                        <li><a href="/WD-FINALS/pages/contact/index.html" class="footer-link">Contact</a></li>
+                        <!-- Adjusted paths for footer links -->
+                        <li><a href="../../index.html" class="footer-link">Home</a></li>
+                        <li><a href="./index.html" class="footer-link">About me</a></li>
+                        <li><a href="../education/index.html" class="footer-link">Education</a></li>
+                        <li><a href="../project/index.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="../contact/index.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
 
@@ -92,7 +98,7 @@
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Contact Info</h3>
                     <ul class="space-y-2">
-                       <li class="flex items-center justify-center md:justify-start">
+                        <li class="flex items-center justify-center md:justify-start">
                             <i class="fas fa-envelope text-[#FF3B3B] mr-2"></i>
                             <span class="text-[#666666]">waideowendelosreyes@gmail.com</span>
                         </li>
@@ -116,7 +122,6 @@
         </footer>
     </div>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </body>
 </html>
