@@ -78,6 +78,8 @@ WD-FINALS
 ├── pages
 │ ├── about
 │ │ ├── assets
+│ │ │ ├── css/style.css
+│ │ │ └── js/scripts.js
 │ │ └── index.html
 │ ├── contact
 │ │ ├── assets
@@ -91,6 +93,8 @@ WD-FINALS
 │ │ └── index.html
 │ └── project
 │ ├── assets
+│ │ │ ├── css/style.css
+│ │ │ └── js/scripts.js
 │ └── index.html
 ├── index.html
 └── README.md
