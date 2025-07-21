@@ -66,6 +66,7 @@ HTML, CSS, JavaScript
 6. Page folder names must be relevant to their content.
 7. Follow the file structure below:
 
+```
 WD-FINALS
 ├── assets
 │ ├── css
@@ -93,10 +94,8 @@ WD-FINALS
 │ └── index.html
 ├── index.html
 └── README.md
+```
 
-yaml
-Copy
-Edit
 
 ---
 
