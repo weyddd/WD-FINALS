@@ -8,25 +8,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/pages/project/assets/css/style.css">
+    <!-- Custom CSS: Path adjusted based on your file structure -->
+    <!-- Assumes style.css is in WD-FINALS/pages/project/assets/css/ -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="font-inter bg-[#2C2C2C]"> <!-- Overall dark gray background for the page -->
+<body class="font-inter"> <!-- Removed inline background color, handled by CSS -->
 
     <div class="page-wrapper-projects"> <!-- Wrapper for projects page content -->
         <!-- Navigation Bar -->
         <nav class="bg-white p-4 flex justify-between items-center border-b border-gray-200">
             <div class="flex items-center">
-                <a href="/WD-FINALS/index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
+                <!-- Adjusted path for logo link: Go up two levels to WD-FINALS/ then to index.html -->
+                <a href="../../index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
             </div>
            <div class="hidden md:flex space-x-8">
-                <a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
-                <a href="/WD-FINALS/pages/about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
-                <a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
-                <a href="/WD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
-                <a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
+                <!-- Adjusted paths for navigation links (relative to pages/project/index.html) -->
+                <a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
+                <a href="../about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
+                <a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
+                <a href="../education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
+                <a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
             </div>
-            <a href="/WD-FINALS/pages/contact/index.html" class="btn-primary hidden md:block">Let's Talk</a>
+            <!-- Adjusted path for "Let's Talk" button -->
+            <a href="../contact/index.html" class="btn-primary hidden md:block">Let's Talk</a>
             <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-[#333333] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -36,18 +40,19 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white p-4 border-b border-gray-200">
             <ul class="flex flex-col space-y-4">
-                <li><a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
-                <li><a href="/WD-FINALS/pages/about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
-                <li><a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
-                <li><a href="/WD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
+                <!-- Adjusted paths for mobile navigation links -->
+                <li><a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
+                <li><a href="../about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
+                <li><a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
+                <li><a href="../education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
+                <li><a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
+                <li><a href="../contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
             </ul>
         </div>
 
         <!-- Projects Section -->
         <section id="projects" class="py-16 px-4 md:px-8 text-white">
-            <h2 class="text-4xl font-bold text-center text-[#F8F0F0] mb-4 relative inline-block">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-[#F8F0F0] mb-4 relative inline-block">
                 My Recent Projects
                 <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-24 h-1 bg-[#FF3B3B] rounded-full"></span>
             </h2>
@@ -55,7 +60,8 @@
                 <!-- Project Card 1: WD-Seatwork-1 -->
                 <div class="project-card-v2 flex flex-col md:flex-row items-center">
                     <div class="project-image-container mb-4 md:mb-0 md:mr-8">
-                        <img src="../project/assets/img/wd-sw-1.jpg" alt="WD-Seatwork-1" class="rounded-lg object-cover w-full h-full">
+                        <!-- Path for wd-sw-1.jpg is correct relative to pages/project/index.html -->
+                        <img src="assets/img/wd-sw-1.jpg" alt="WD-Seatwork-1" class="rounded-lg object-cover w-full h-full">
                     </div>
                     <div class="project-content-container flex-1 text-center md:text-left">
                         <h3 class="text-3xl font-bold text-[#F8F0F0] mb-2">WD-Seatwork-1</h3>
@@ -72,10 +78,11 @@
                     </div>
                 </div>
 
-                <!-- Project Card 2: WD-Seatwork-2  -->
+                <!-- Project Card 2: WD-Seatwork-2 -->
                 <div class="project-card-v2 flex flex-col md:flex-row items-center">
                     <div class="project-image-container mb-4 md:mb-0 md:mr-8">
-                        <img src="../project/assets/img/wd-sw-2.jpg" alt="WD-Seatwork-2" class="rounded-lg object-cover w-full h-full">
+                        <!-- Path for wd-sw-2.jpg is correct relative to pages/project/index.html -->
+                        <img src="assets/img/wd-sw-2.jpg" alt="WD-Seatwork-2" class="rounded-lg object-cover w-full h-full">
                     </div>
                     <div class="project-content-container flex-1 text-center md:text-left">
                         <h3 class="text-3xl font-bold text-[#F8F0F0] mb-2">WD-Seatwork-2</h3>
@@ -115,11 +122,12 @@
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="/WD-FINALS/index.html" class="footer-link">Home</a></li>
-                        <li><a href="/WD-FINALS/pages/about/index.html" class="footer-link">About me</a></li>
-                        <li><a href="/WD-FINALS/pages/education/index.html" class="footer-link">Education</a></li>
-                        <li><a href="/WD-FINALS/pages/project/index.html" class="footer-link">Portfolio</a></li>
-                        <li><a href="/WD-FINALS/pages/contact/index.html" class="footer-link">Contact</a></li>
+                        <!-- Adjusted paths for footer links -->
+                        <li><a href="../../index.html" class="footer-link">Home</a></li>
+                        <li><a href="../about/index.html" class="footer-link">About me</a></li>
+                        <li><a href="../education/index.html" class="footer-link">Education</a></li>
+                        <li><a href="./index.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="../contact/index.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
                 <!-- Column 3: Contact Info -->
@@ -150,7 +158,6 @@
         </footer>
     </div>
 
-    <!-- Custom JavaScript -->
-    <script src="/pages/project/assets/js/scripts.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </body>
 </html>
