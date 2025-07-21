@@ -93,6 +93,9 @@ WD-FINALS
 │ │ └── index.html
 │ └── project
 │ ├── assets
+│ ├── img
+│ │ ├── wd-sw-1.png
+│ │ └── wd-sw-2.png
 │ │ │ ├── css/style.css
 │ │ │ └── js/scripts.js
 │ └── index.html
