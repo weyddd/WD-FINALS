@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS: Path adjusted based on your file structure -->
+    <!-- Assumes style.css is in WD-FINALS/pages/education/assets/css/ -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="font-inter">
 
@@ -17,16 +18,19 @@
         <!-- Navigation Bar -->
         <nav class="bg-white p-4 flex justify-between items-center border-b border-gray-200">
             <div class="flex items-center">
-                <a href="/WD-FINALS/index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
+                <!-- Adjusted path for logo link: Go up two levels to WD-FINALS/ then to index.html -->
+                <a href="../../index.html" class="text-2xl font-bold text-[#FF3B3B]">WAIDE.</a>
             </div>
             <div class="hidden md:flex space-x-8">
-                  <a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
-                 <a href="/WD-FINALS/pages/about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
-                 <a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
-                 <a href="/WD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
-                 <a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
+                <!-- Adjusted paths for navigation links -->
+                <a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Home</a>
+                <a href="../about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">About</a>
+                <a href="../project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Portfolio</a>
+                <a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Education</a>
+                <a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium">Contact</a>
             </div>
-            <a href="contact.html" class="btn-primary hidden md:block">Let's Talk</a>
+            <!-- Adjusted path for "Let's Talk" button -->
+            <a href="../contact/index.html" class="btn-primary hidden md:block">Let's Talk</a>
             <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-[#333333] focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
@@ -36,43 +40,79 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white p-4 border-b border-gray-200">
             <ul class="flex flex-col space-y-4">
-                 <li><a href="/WD-FINALS/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
-                <li><a href="/WD-FINALS/pages/about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
-                <li><a href="/WD-FINALS/pages/project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
-                <li><a href="/wD-FINALS/pages/education/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
-                <li><a href="/WD-FINALS/pages/contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
+                <!-- Adjusted paths for mobile navigation links -->
+                <li><a href="../../index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Home</a></li>
+                <li><a href="../about/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">About</a></li>
+                <li><a href="../project/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Portfolio</a></li>
+                <li><a href="./index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Education</a></li>
+                <li><a href="../contact/index.html" class="nav-link text-[#333333] hover:text-[#FF3B3B] transition duration-300 ease-in-out font-medium block py-2">Contact</a></li>
+                <li><a href="../contact/index.html" class="btn-primary w-full text-center">Let's Talk</a></li>
             </ul>
         </div>
 
-        <!-- Education Section -->
-        <section id="education" class="bg-white py-16 px-4 md:px-8">
-            <h2 class="text-4xl font-bold text-center text-[#333333] mb-10">My Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Bachelor of Science in Information Technology specialized in Cybersecurity</h3>
-                    <p class="text-[#666666] mb-2">FEUTECH</p>
-                    <p class="text-[#666666] mb-4">Currently Studying</p>
-                    <p class="text-[#666666]">
+        <!-- Hero Section (Path for waide.jpg adjusted) -->
+        <!-- This section would typically be on your main index.html. If it's on this education page, the image path is now relative. -->
+        <section id="hero" class="py-16 px-4 md:px-8 bg-white flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div class="flex-1 flex justify-center items-center order-2 md:order-1 mt-8 md:mt-0">
+                <!-- Adjusted path for waide.jpg: Go up two levels to WD-FINALS/ then into assets/img/ -->
+                <img src="../../assets/img/weyd.png" alt="waide" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg">
+            </div>
+            <div class="flex-1 order-1 md:order-2 md:ml-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Hi, I'm <span class="text-[#FF3B3B]">Waide</span> Delos Reyes
+                </h1>
+                <p class="text-lg text-gray-700 mb-6">
+                    A Cybersecurity student passionate about building secure and user-friendly web applications.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="../project/index.html" class="btn-primary">View My Work</a>
+                    <a href="../contact/index.html" class="btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section (Enhanced from previous immersive) -->
+        <section class="education-section py-12 px-4 md:px-8 bg-gray-50">
+            <!-- Section Title -->
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-gray-900 tracking-tight">
+                My Education
+            </h2>
+
+            <!-- Education Grid Container -->
+            <div class="education-grid max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Bachelor of Science Card -->
+                <div class="education-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bachelor of Science in Information Technology <br class="hidden md:inline"> specialized in Cybersecurity
+                    </h3>
+                    <p class="text-lg text-gray-700 font-medium mb-1">FEUTECH</p>
+                    <p class="text-sm text-gray-500 mb-4 italic">Currently Studying</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
                         Focused on network security, ethical hacking, incident response, and cryptography. Completed a capstone project on secure web application development.
                     </p>
                 </div>
 
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Senior High School</h3>
-                    <p class="text-[#666666] mb-2">Our Lady of Fatima Antipolo</p>
-                    <p class="text-[#666666] mb-4">Graduated: June 2024</p>
-                    <p class="text-[#666666]">
-                       Developed strong foundational skills in mathematics, science, and computer literacy.
+                <!-- Senior High School Card -->
+                <div class="education-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Senior High School</h3>
+                    <p class="text-lg text-gray-700 font-medium mb-1">Our Lady of Fatima Antipolo</p>
+                    <p class="text-sm text-gray-500 mb-4 italic">Graduated: June 2024</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Developed strong foundational skills in mathematics, science, and computer literacy.
+                    </p>
                 </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold text-[#333333] mb-2">Cainta Catholic College</h3>
-                    <p class="text-[#666666] mb-2">Local High School</p>
-                    <p class="text-[#666666] mb-4">Graduated: May 2022</p>
-                    <p class="text-[#666666]">
+
+                <!-- Cainta Catholic College Card (Spans two columns on medium screens and up) -->
+                <div class="education-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-100 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Cainta Catholic College</h3>
+                    <p class="text-lg text-gray-700 font-medium mb-1">Local High School</p>
+                    <p class="text-sm text-gray-500 mb-4 italic">Graduated: May 2022</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
                         Developed strong foundational skills in mathematics, science.
                     </p>
                 </div>
+
             </div>
         </section>
 
@@ -95,18 +135,20 @@
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                       <li><a href="/WD-FINALS/index.html" class="footer-link">Home</a></li>
-                        <li><a href="/WD-FINALS/pages/about/index.html" class="footer-link">About me</a></li>
-                        <li><a href="/WD-FINALS/pages/education/index.html" class="footer-link">Education</a></li>
-                        <li><a href="/WD-FINALS/pages/project/index.html" class="footer-link">Portfolio</a></li>
-                        <li><a href="/WD-FINALS/pages/contact/index.html" class="footer-link">Contact</a></li>
+                        <!-- Adjusted paths for footer links -->
+                        <li><a href="../../index.html" class="footer-link">Home</a></li>
+                        <li><a href="../about/index.html" class="footer-link">About me</a></li>
+                        <li><a href="./index.html" class="footer-link">Education</a></li>
+                        <li><a href="../project/index.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="../contact/index.html" class="footer-link">Contact</a></li>
+                    </ul>
                 </div>
 
                 <!-- Column 3: Contact Info -->
                 <div>
                     <h3 class="text-xl font-semibold text-[#333333] mb-4">Contact Info</h3>
                     <ul class="space-y-2">
-                     <li class="flex items-center justify-center md:justify-start">
+                        <li class="flex items-center justify-center md:justify-start">
                             <i class="fas fa-envelope text-[#FF3B3B] mr-2"></i>
                             <span class="text-[#666666]">waideowendelosreyes@gmail.com</span>
                         </li>
@@ -130,7 +172,6 @@
         </footer>
     </div>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </body>
 </html>

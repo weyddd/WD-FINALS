@@ -1,37 +1,57 @@
+/* Global Box Sizing for consistent element sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Custom styles for the Inter font and general body */
+/* Body now primarily sets background and font, letting .page-wrapper handle layout */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #2C2C2C; /* Dark gray from palette */
     min-height: 100vh; /* Ensure body takes full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem; /* Padding around the main content container */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    display: flex; /* Use flexbox to center the page-wrapper */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align to start vertically, allowing content to flow naturally */
+    padding-top: 2rem; /* Add consistent padding from the top */
+    padding-bottom: 2rem; /* Add consistent padding at the bottom */
 }
 
 /* Wrapper for each page content to apply white background and shadow */
 .page-wrapper {
     background-color: #FFFFFF; /* White background */
     border-radius: 2rem; /* Large rounded corners */
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Soft shadow */
+    /* Enhanced shadow for more depth */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 1200px; /* Max width for the container */
     overflow: hidden; /* Ensures rounded corners clip content */
     display: flex;
     flex-direction: column;
+    min-height: calc(100vh - 4rem); /* Adjust min-height to account for body padding */
 }
 
 /* Card styling for projects and other content */
+/* Note: For the Education section, Tailwind classes are used directly on .education-card */
+/* This .card style applies to other elements with the 'card' class if they exist */
 .card {
     background-color: #FFFFFF; /* Cards inside the white wrapper are also white */
     border-radius: 1rem; /* More rounded corners */
-    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02); /* Lighter shadow for inner cards */
+    /* Slightly refined shadow for inner cards */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     padding: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Consistent spacing */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition for hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 5px 10px -5px rgba(0, 0, 0, 0.05); /* Enhance shadow on hover */
 }
 
 /* Hero section specific styling */
+/* These styles might be overridden by Tailwind classes in your HTML */
 #hero {
     display: flex;
     flex-direction: column;
@@ -48,6 +68,28 @@ body {
     }
 }
 
+/* Navigation Link Styling (for elements with nav-link class) */
+.nav-link {
+    position: relative; /* Needed for underline animation */
+    padding-bottom: 0.25rem; /* Space for underline */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF3B3B; /* Red underline */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
 /* Button styling */
 .btn-primary {
     background-color: #FF3B3B; /* Bright Red from palette */
@@ -57,11 +99,15 @@ body {
     font-weight: 600;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: inline-flex; /* Ensure flex properties for icon alignment if needed */
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-primary:hover {
     background-color: #FF6B6B; /* Light Red from palette on hover */
     transform: translateY(-2px);
+    box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.15), 0 3px 6px -2px rgba(0, 0, 0, 0.08); /* Stronger shadow on hover */
 }
 
 .btn-secondary {
@@ -72,12 +118,16 @@ body {
     border-radius: 0.5rem;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
+    display: inline-flex; /* Ensure flex properties for icon alignment if needed */
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-secondary:hover {
     background-color: #FF3B3B;
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Add shadow on hover */
 }
 
 /* Input field styling */
@@ -103,9 +153,24 @@ body {
 .footer-link {
     color: #666666; /* Medium gray for footer links */
     transition: color 0.2s ease-in-out;
+    position: relative; /* For hover underline effect */
+    padding-bottom: 0.125rem; /* Space for underline */
 }
 .footer-link:hover {
     color: #FF3B3B; /* Bright Red on hover */
+}
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF3B3B;
+    transition: width 0.3s ease-in-out;
+}
+.footer-link:hover::after {
+    width: 100%;
 }
 
 /* Responsive image styling */
